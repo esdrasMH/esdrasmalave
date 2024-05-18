@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ingeniero de Sistemas con más de cinco años de experiencia en desarrollo frontend. Especializado en HTML, CSS, JavaScript y Vue.js. Colaborador de diversos proyectos bajo metodologías ágiles. Apasionado por crear interfaces eficientes y accesibles, comprometido con la excelencia técnica y soluciones de alta calidad.">
+    <meta name="keywords"
+        content="Ingeniero de Sistemas, Desarrollo Frontend, Desarrollo Web, Diseño Responsivo, Diseño Mobile-first, HTML semántico, Accesibilidad web, SEO, Estándares Web, Compatibilidad entre Navegadores, HTML, CSS, JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, Integración de API's">
+    <meta name="author" content="Esdras Malavé">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Esdras Malavé | Ingeniero de Sistemas | Desarrollador Frontend</title>
+    <link rel="sitemap" type="application/xml" href="https://www.esdrasmalave.com/sitemap.xml">
+    <style>
+        :root {
+            /* Colores primarios */
+            --black-primary: #1A1A1A;
+            --blue-primary: #647eff;
+            --gray-primary: #545454;
+            --green-primary: #42B883;
+            --white-primary: #FFFFFF;
+
+            /* Colores secundarios */
+            --black-secondary: #242424;
+            --blue-secondary: #AAC8E4;
+            --gray-secondary: #EBEBEB;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--black-primary);
+            color: var(--gray-secondary);
+            font-family: sans-serif;
+        }
+
+        header,
+        main,
+        footer {
+            width: 100%;
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        /* Cabecera de página */
+        header {
+            border-bottom: 1px solid var(--gray-primary);
+        }
+
+        header button {
+            display: none;
+            width: 44px;
+            height: 44px;
+            margin-top: 12px;
+            margin-left: calc(100% - 56px);
+            padding: 4px;
+            background-color: var(--black-primary);
+            border: 2px solid var(--gray-secondary);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        header .icono-menu-abrir {
+            display: block;
+        }
+
+        header .icono-menu-cerrar {
+            display: none;
+        }
+
+        header nav {
+            text-align: right;
+        }
+
+        header nav.menu-abierto {
+            display: block;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        header li {
+            display: inline-block;
+        }
+
+        header a {
+            display: block;
+            color: var(--gray-secondary);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: var(--green-primary);
+        }
+
+        main {
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+
+        /* Sección principal */
+        .seccion-principal,
+        .seccion-principal-movil {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-image: linear-gradient(to right, var(--green-primary), var(--blue-primary));
+            border-image-slice: 1;
+        }
+
+        .seccion-principal h1,
+        .seccion-principal-movil h1 {
+            background: linear-gradient(45deg, var(--green-primary), var(--blue-primary));
+            background-clip: text;
+            color: transparent;
+        }
+
+        .seccion-principal h1 span,
+        .seccion-principal-movil h1 span {
+            display: block;
+        }
+
+        .seccion-principal div,
+        .seccion-principal-movil div {
+            float: right;
+        }
+
+        .seccion-principal a,
+        .seccion-principal-movil a {
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .seccion-principal img,
+        .seccion-principal-movil img {
+            background: linear-gradient(45deg, var(--green-primary), var(--blue-primary));
+            border-radius: 4px;
+            box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.4);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .seccion-principal img:hover,
+        .seccion-principal-movil img:hover {
+            box-shadow: 0 0 12px 1px rgba(255, 255, 255, 8);
+        }
+
+        .seccion-principal {
+            padding: 88px 0;
+        }
+
+        .seccion-principal h1 {
+            font-size: 32px;
+        }
+
+        .seccion-principal h1 span {
+            font-size: 20px;
+        }
+
+        .seccion-principal-movil {
+            display: none;
+        }
+
+        .seccion-principal-movil {
+            padding: 0 0 64px;
+        }
+
+        .seccion-principal-movil h1 {
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+
+        .seccion-principal-movil h1 span {
+            margin: 12px 0;
+            font-size: 16px;
+        }
+
+        section h2 {
+            color: var(--green-primary);
+        }
+
+        /* Sección sobre mí */
+        .seccion-sobre-mi p em {
+            font-style: normal;
+            color: var(--blue-secondary);
+        }
+
+        /* Sección de experiencia */
+        .seccion-experiencia ul {
+            background-color: var(--black-secondary);
+            padding: 8px 40px 24px;
+            border-radius: 8px;
+        }
+
+        .empresa-cliente a,
+        .empresa-cliente a:visited {
+            color: var(--blue-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .empresa-cliente a:hover {
+            color: var(--blue-primary);
+        }
+
+        .empresa-cliente span {
+            display: block;
+        }
+
+        .empresa-cliente~p {
+            margin: 12px 0;
+        }
+
+        .responsabilidades li::marker {
+            color: var(--blue-secondary);
+        }
+
+        .tecnologias {
+            padding: 0;
+        }
+
+        .tecnologias li {
+            display: inline-block;
+            margin: 4px 0;
+            padding: 6px 18px;
+            background-color: #1A1A1A;
+            border-radius: 16px;
+            color: var(--blue-secondary);
+            border: 1px solid var(--blue-secondary);
+        }
+
+        /* Seccion educación */
+        .educacion-superior p,
+        .educacion-cursos p {
+            margin: 12px 0;
+            padding-left: 40px;
+        }
+
+        .educacion-superior a,
+        .educacion-cursos a,
+        .educacion-superior a:visited,
+        .educacion-cursos a:visited {
+            color: var(--blue-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .educacion-superior a:hover,
+        .educacion-cursos a:hover {
+            color: var(--blue-primary);
+        }
+
+        .educacion-cursos table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .educacion-cursos table th,
+        .educacion-cursos table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-secondary);
+        }
+
+        /* Seccion habilidades */
+        .seccion-habilidades div {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .seccion-habilidades .habilidades-tecnicas,
+        .seccion-habilidades .habilidades-blandas {
+            padding: 8px 16px;
+        }
+
+        .seccion-habilidades .habilidades-tecnicas {
+            background-color: #242424;
+            border-radius: 8px;
+        }
+
+        .seccion-habilidades .habilidades-tecnicas ul,
+        .seccion-habilidades .habilidades-blandas ul {
+            padding: 0;
+        }
+
+        .seccion-habilidades .habilidades-tecnicas ul {
+            list-style: none;
+        }
+
+        .seccion-habilidades .habilidades-blandas ul li {
+            margin-bottom: 4px;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 100px;
+            color: var(--gray-secondary);
+            text-align: center;
+            border-top: 1px solid var(--gray-primary);
+        }
+
+        @media screen and (max-width: 520px) {
+            header {
+                border-bottom: none;
+            }
+
+            header button {
+                display: block;
+            }
+
+            header nav {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 44px);
+                background-color: rgba(255, 255, 255, 0.32);
+            }
+
+            header ul {
+                width: inherit;
+                background-color: var(--black-secondary);
+            }
+
+            header li {
+                display: block;
+                border-bottom: 2px solid var(--black-primary);
+            }
+
+            header li:last-child {
+                border-bottom: none;
+            }
+
+            section h2 {
+                margin: 14px 0;
+            }
+
+            .seccion-principal {
+                display: none;
+            }
+
+            .seccion-principal-movil {
+                display: block;
+            }
+
+            .seccion-experiencia .empresa-cliente,
+            .educacion-superior h3,
+            .educacion-cursos h3,
+            .habilidades-tecnicas h3,
+            .habilidades-blandas h3 {
+                margin: 12px 0;
+            }
+
+            .seccion-experiencia p,
+            .educacion-superior p {
+                margin: 6px 0;
+            }
+
+            .seccion-experiencia ul {
+                padding: 8px 28px;
+            }
+
+            .seccion-experiencia .responsabilidades,
+            .seccion-experiencia .tecnologias {
+                padding: 8px 24px;
+            }
+
+            .seccion-habilidades div {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .educacion-superior p {
+                padding-left: 8px;
+            }
+
+            footer {
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button type="button" onclick="abrirMenu()">
+            <img class="icono-menu-abrir" src="icon/menu.svg" alt="Abrir menu de opciones de navegación" width="32px"
+                height="32px" title="Abrir menu de opciones de navegación">
+            <img class="icono-menu-cerrar" src="icon/cerrar.svg" alt="Cerrar menu de opciones de navegación"
+                width="32px" height="32px" title="Cerrar menu de opciones de navegación">
+        </button>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#sobre-mi" title="Ir a la sección sobre mí">Sobre mí</a>
+                </li>
+                <li>
+                    <a href="#experiencia" title="Ir a la sección de experiencia">Experiencia</a>
+                </li>
+                <li>
+                    <a href="#educacion" title="Ir a la sección de educación">Educación</a>
+                </li>
+                <li>
+                    <a href="#habilidades" title="Ir a la sección de habilidades">Habilidades</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seccion-principal-movil">
+            <h1>
+                Hola Mundos! <br>
+                soy Esdras Malavé
+                <span>
+                    Desarrollador Frontend con <br>
+                    +5 años de experiencia
+                </span>
+            </h1>
+
+            <div class="enlaces-contacto">
+                <a href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/" target="_blank"
+                    rel="noopener noreferrer" title="Ir al sitio web de Linkedin">
+                    <img src="icon/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
+                        title="Ir al sitio web de Linkedin">
+                </a>
+                <a href="https://github.com/esdrasmh" target="_blank" rel="noopener noreferrer"
+                    title="Ir al sitio web de GitHub">
+                    <img src="icon/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
+                        title="Ir al sitio web de GitHub">
+                </a>
+            </div>
+        </section>
+
+        <section class="seccion-principal">
+            <h1>Hola Mundo! soy Esdras Malavé
+                <span>Desarrollador Frontend con +5 años de experiencia</span>
+            </h1>
+
+            <div class="enlaces-contacto">
+                <a href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/" target="_blank"
+                    rel="noopener noreferrer" title="Ir al sitio web de Linkedin">
+                    <img src="icon/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
+                        title="Ir al sitio web de Linkedin">
+                </a>
+                <a href="https://github.com/esdrasmh" target="_blank" rel="noopener noreferrer"
+                    title="Ir al sitio web de GitHub">
+                    <img src="icon/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
+                        title="Ir al sitio web de GitHub">
+                </a>
+            </div>
+        </section>
+
+        <section class="seccion-sobre-mi">
+            <h2 id="sobre-mi">Sobre mí</h2>
+            <p>
+                En 2012 inicie en el mundo de TI con el área de soporte y redes, luego de seis años me titule como
+                <em>Ingeniero de Sistemas</em> mismo tiempo que llevo como desarrollador profesional. He colaborado en
+                más de
+                diez proyectos con equipos pequeños, medianos y grandes bajo metodologías agiles y tradicionales.
+            </p>
+            <p>
+                Me especialice como <em>Desarrollador Frontend Web</em>, particularmente con el <em>ecosistema de
+                    Vue.js</em>, también he
+                contribuido en equipos con tecnologías similares como React y Angular. Cada día me preocupo por
+                mejorar mis habilidades en <em>semántica, accesibilidad, rendimiento y SEO</em>.
+            </p>
+        </section>
+
+        <section class="seccion-experiencia">
+            <h2 id="experiencia">Experiencia</h2>
+            <ul>
+                <li>
+                    <h3 class="empresa-cliente">
+                        Empresa: <a href="https://www.api-ux.com" target="_blank" rel="noopener noreferrer"
+                            title="Ir al sitio web de Apiux">Apiux
+                            Tecnología</a>
+                        <span>Cliente: <a href="http://www.sii.cl" target="_blank" rel="noopener noreferrer" title="Ir al sitio web de Servicio de
+                            Impuestos Internos">Servicio de
+                                Impuestos Internos</a></span>
+                    </h3>
+                    <p>Periodo: <time datetime="2023-03">03/2023</time> a <time datetime="2024-01">01/2024</time></p>
+                    <p>Cargo: Desarrollador Frontend</p>
+                    <p>Responsabilidades:</p>
+                    <ul class="responsabilidades">
+                        <li>Mantuve y desarrollé funcionalidades.</li>
+                        <li>Detecté y corregí bugs en proyectos de producción.</li>
+                        <li>Optimice componentes UI.</li>
+                        <li>Optimice estilos CSS.</li>
+                        <li>Optimice imágenes e iconos para un mejor rendimiento.</li>
+                        <li>Cree y mejore vistas responsivas.</li>
+                        <li>Mejore semántica y accesibilidad.</li>
+                        <li>Depure archivos HTML con código en desuso.</li>
+                        <li>Corregí advertencias de la consola del navegador.</li>
+                    </ul>
+                    <p>Tecnologías:</p>
+                    <ul class="tecnologias">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                        <li>AJAX</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="empresa-cliente">Empresa:
+                        <a href="http://www.sii-group.cl" target="_blank" rel="noopener noreferrer"
+                            title="Ir al sitio web de SII Group">SII Group</a>
+                        <span>Cliente: <a href="https://www.derco.cl/" target="_blank" rel="noopener noreferrer"
+                                title="Ir al sitio web de Derco">Derco</a></span>
+                    </h3>
+                    <p>Periodo: <time datetime="2021-11">11/2021</time> a <time datetime="2023-01">01/2023</time></p>
+                    <p>Cargo: Desarrollador Frontend</p>
+                    <p>Responsabilidades:</p>
+                    <ul class="responsabilidades">
+                        <li>Detecté y corregí bugs en proyectos de producción.</li>
+                        <li>Mantuve y desarrollé funcionalidades.</li>
+                        <li>Optimice componentes UI.</li>
+                        <li>Optimice imágenes e iconos para un mejor rendimiento.</li>
+                        <li>Migre templetes Pug a HTML.</li>
+                        <li>Corregí advertencias de Sonar Cloud.</li>
+                        <li>Participe en reuniones para refinar, estimar y asignar tareas.</li>
+                        <li>Apoye a otros desarrolladores con menos experiencia en frontend para la realización de tareas.</li>
+                    </ul>
+                    <p>Tecnologías:</p>
+                    <ul class="tecnologias">
+                        <li>HTML</li>
+                        <li>Pug</li>
+                        <li>Stylus</li>
+                        <li>Sass</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>Vue.js</li>
+                        <li>React</li>
+                        <li>MongoDB</li>
+                        <li>Axios</li>
+                        <li>Docker</li>
+                        <li>SonarCloud</li>
+                        <li>AWS S3</li>
+                        <li>Gitflow</li>
+                        <li>GitHub</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="empresa-cliente">
+                        Empresa: <a href="http://www.hermesccs.com" target="_blank" rel="noopener noreferrer" title="Ir al sitio web de Hermes
+                        Comunicaciones">Hermes
+                            Comunicaciones</a>
+                    </h3>
+                    <p>Periodo: <time datetime="2020-10">10/2020</time> a <time datetime="2021-11">11/2021</time></p>
+                    <p>Cargo: Desarrollador Frontend</p>
+                    <p>Responsabilidades:</p>
+                    <ul class="responsabilidades">
+                        <li>Detecté y corregí bugs en proyectos de producción.</li>
+                        <li>Desarrolle API proxy para verificar las peticiones al servidor que provenían de la web.</li>
+                        <li>Desarrolle versión web de la app hibrida existente.</li>
+                        <li>Migre App hibrida para Android e IOS.</li>
+                        <li>Integre API's.</li>
+                        <li>Participe en reuniones con el cliente para definir requerimientos.</li>
+                        <li>Apoye a otros desarrolladores con menos experiencia en frontend para la realización de tareas.</li>
+                        <li>Revise y probe tareas de otros desarrolladores para integrarlas a producción.</li>
+                        <li>Compilé y desplegué versiones de prueba para Android e IOS con Firesabe.</li>
+                    </ul>
+                    <p>Tecnologías:</p>
+                    <ul class="tecnologias">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                        <li>Vuetify</li>
+                        <li>JavaScript</li>
+                        <li>Vue.js</li>
+                        <li>React</li>
+                        <li>Cordova</li>
+                        <li>Ionic</li>
+                        <li>Capacitor</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Axios</li>
+                        <li>Fetch API</li>
+                        <li>Google Maps</li>
+                        <li>AWS Cognito</li>
+                        <li>Firebase</li>
+                        <li>GitHub</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="empresa-cliente">
+                        Empresa: <a href="https://uxready.com" target="_blank" rel="noopener noreferrer"
+                            title="Ir al sitio web de UX Ready">UX Ready</a>
+                    </h3>
+                    <p>Periodo: <time datetime="2020-02">02/2020</time> a <time datetime="2020-06">06/2020</time></p>
+                    <p>Cargo: Desarrollador Frontend</p>
+                    <p>Responsabilidades:</p>
+                    <ul class="responsabilidades">
+                        <li>Desarrolle sitio web</li>
+                        <li>Integre y optimice componentes de otros proyectos</li>
+                        <li>Integre API's</li>
+                        <li>Participe en reuniones con el cliente para definir requerimientos</li>
+                    </ul>
+                    <p>Tecnologías:</p>
+                    <ul class="tecnologias">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Vuetify</li>
+                        <li>JavaScript</li>
+                        <li>Vue.js</li>
+                        <li>Vis.js</li>
+                        <li>Google Maps</li>
+                        <li>Axios</li>
+                        <li>GitHub</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="empresa-cliente">
+                        Empresa: <a href="http://www.pacific-logging.com" target="_blank" rel="noopener noreferrer"
+                            title="Ir al sitio web de Pacific Logging">Pacific Logging</a>
+                    </h3>
+                    <p>Periodo: <time datetime="2018-08">08/2018</time> a <time datetime="2020-01">01/2020</time></p>
+                    <p>Cargo: Desarrollador Frontend</p>
+                    <p>Responsabilidades:</p>
+                    <ul class="responsabilidades">
+                        <li>Participe en el desarrollo de sitio web</li>
+                        <li>Integre API's</li>
+                        <li>Realice QA de las nuevas integraciones</li>
+                        <li>Participe en reuniones con el cliente para definir requerimientos</li>
+                    </ul>
+                    <p>Tecnologías:</p>
+                    <ul class="tecnologias">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Vuetify</li>
+                        <li>JavaScript</li>
+                        <li>Vue.js</li>
+                        <li>Chart.js</li>
+                        <li>Socket.io</li>
+                        <li>Google Maps</li>
+                        <li>Firebase</li>
+                        <li>SweetAlert2</li>
+                        <li>Axios</li>
+                        <li>GitLab</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="seccion-educacion">
+            <h2 id="educacion">Educación</h2>
+            <section class="educacion-superior">
+                <h3>Superior</h3>
+                <p>Instituto: <a href="http://www.udo.edu.ve" target="_blank" rel="noopener noreferrer"
+                        title="Ir al sitio web de Universidad de Oriente">Universidad de
+                        Oriente</a></p>
+                <p>Periodo: <time datetime="2011-05">05/2011</time> a <time datetime="2018-12">12/2018</time></p>
+                <p>Título: Ingeniero de Sistemas</p>
+            </section>
+            <section class="educacion-cursos">
+                <h3>Cursos</h3>
+                <table>
+                    <thead>
+                        <th>Academia</th>
+                        <th>Expedición</th>
+                        <th>Nombre</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hola Mundo</td>
+                            <td><time datetime="2024-05">05/2024</time></td>
+                            <td><a href="https://academia.holamundo.io/certificates/8eohu869yh" target="_blank"
+                                    rel="noopener noreferrer" title="Ver certificado de TypeScript">TypeScript: sin
+                                    fronteras</a></td>
+                        </tr>
+                        <tr>
+                            <td>Hola Mundo</td>
+                            <td><time datetime="2024-02">02/2024</time></td>
+                            <td><a href="https://academia.holamundo.io/certificates/ljk0ztlmut" target="_blank"
+                                    rel="noopener noreferrer" title="Ver certificado de JavaScript">Ultimate
+                                    JavaScript</a></td>
+                        </tr>
+                        <tr>
+                            <td>Hola Mundo</td>
+                            <td><time datetime="2024-01">01/2024</time></td>
+                            <td><a href="https://academia.holamundo.io/certificates/7xqebykm" target="_blank"
+                                    rel="noopener noreferrer" title="Ver certificado de CSS3">CSS3: sin fronteras</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hola Mundo</td>
+                            <td><time datetime="2024-01">01/2024</time></td>
+                            <td><a href="https://academia.holamundo.io/certificates/nmhf3gbiir" target="_blank"
+                                    rel="noopener noreferrer" title="Ver certificado de HTML5">HTML5: sin fronteras</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Udemy</td>
+                            <td><time datetime="2024-01">01/2024</time></td>
+                            <td><a href="https://www.udemy.com/certificate/UC-97a8f19d-66e6-4041-bdb0-1728afe432ab"
+                                    target="_blank" rel="noopener noreferrer" title="Ver certificado de Vue.js 3">Vue js
+                                    3 Desde cero + Vite + Firebase 9 +
+                                    MEVN</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <section class="seccion-habilidades">
+            <h2 id="habilidades">Habilidades</h2>
+            <div>
+                <section class="habilidades-tecnicas">
+                    <h3>Habilidades Técnicas</h3>
+                    <ul class="tecnologias">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Stylus</li>
+                        <li>Sass</li>
+                        <li>Bootstrap</li>
+                        <li>Vuetify</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>Vue.js</li>
+                        <li>React</li>
+                        <li>Fetch API</li>
+                        <li>Axios</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>Git</li>
+                        <li>Clean code</li>
+                        <li>Accesibilidad</li>
+                        <li>Semántica</li>
+                        <li>SEO</li>
+                        <li>Integración de API's</li>
+                        <li>Diseño responsive</li>
+                        <li>Buenas practicas</li>
+                        <li>Principios SOLID</li>
+                    </ul>
+                </section>
+                <section class="habilidades-blandas">
+                    <h3>Habilidades Blandas</h3>
+                    <ul>
+                        <li>Resolución de problemas</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Comunicación efectiva</li>
+                        <li>Pensamiento crítico</li>
+                        <li>Capacidad de planificación</li>
+                        <li>Orientado a resultados</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2024 - Esdras Malavé</p>
+    </footer>
+
+    <script>
+        const body = document.querySelector('body')
+        const iconoAbrir = document.querySelector('header button img.icono-menu-abrir')
+        const iconoCerrar = document.querySelector('header button img.icono-menu-cerrar')
+        const menuOpciones = document.querySelector('header nav')
+        const opciones = document.querySelectorAll('header nav ul li')
+        const estilos = window.getComputedStyle(menuOpciones)
+
+        function abrirMenu() {
+            if (estilos.display !== 'none') return cerrarMenu()
+
+            body.style.overflow = 'hidden'
+            iconoAbrir.style.display = 'none'
+            iconoCerrar.style.display = 'block'
+            menuOpciones.classList.add('menu-abierto')
+
+            opciones.forEach(o => {
+                o.addEventListener('click', () => cerrarMenu())
+            })
+        }
+
+        function cerrarMenu() {
+            body.style.overflow = 'auto'
+            iconoAbrir.style.display = 'block'
+            iconoCerrar.style.display = 'none'
+            menuOpciones.classList.remove('menu-abierto')
+
+            opciones.forEach(o => {
+                o.removeEventListener('click', () => cerrarMenu())
+            })
+        }
+    </script>
+</body>
