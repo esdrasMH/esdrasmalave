@@ -68,7 +68,7 @@
             display: none;
         }
 
-        header nav {
+        header nav, footer nav {
             text-align: right;
         }
 
@@ -76,18 +76,18 @@
             display: block;
         }
 
-        header ul {
+        header ul, footer ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
 
-        header li {
+        header li, footer li {
             display: inline-block;
         }
 
-        header a {
+        header a, footer nav a {
             display: block;
             color: var(--gray-secondary);
             text-align: center;
@@ -97,7 +97,7 @@
             transition: color 0.3s ease;
         }
 
-        header a:hover {
+        header a:hover, footer nav a:hover {
             color: var(--green-primary);
         }
 
@@ -127,27 +127,23 @@
             display: block;
         }
 
-        .seccion-principal div,
-        .seccion-principal-movil div {
+        .enlaces-contacto {
             float: right;
         }
 
-        .seccion-principal a,
-        .seccion-principal-movil a {
+        .enlaces-contacto a {
             text-decoration: none;
             margin-right: 20px;
         }
 
-        .seccion-principal img,
-        .seccion-principal-movil img {
+        .enlaces-contacto img {
             background: linear-gradient(45deg, var(--green-primary), var(--blue-primary));
             border-radius: 4px;
             box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.4);
             transition: box-shadow 0.3s ease;
         }
 
-        .seccion-principal img:hover,
-        .seccion-principal-movil img:hover {
+        .enlaces-contacto img:hover {
             box-shadow: 0 0 12px 1px rgba(255, 255, 255, 8);
         }
 
@@ -298,10 +294,25 @@
 
         /* Pie de página */
         footer {
-            margin-top: 100px;
+            margin-top: 134px;
             color: var(--gray-secondary);
             text-align: center;
             border-top: 1px solid var(--gray-primary);
+        }
+
+        footer .enlaces-contacto {
+            margin-top: -88px;
+            margin-right: 12px;
+        }
+
+        footer nav a {
+            margin-bottom: 50px;
+        }
+
+        footer p {
+            padding: 12px;
+            border-radius: 8px;
+            background-color: var(--black-secondary);
         }
 
         @media screen and (max-width: 520px) {
@@ -379,7 +390,27 @@
             }
 
             footer {
-                margin-top: 50px;
+                margin-top: 120px;
+            }
+
+            footer .enlaces-contacto {
+                margin-right: 24px;
+            }
+
+            footer nav {
+                text-align: center;
+            }
+
+            footer nav a {
+                margin-bottom: 0;
+            }
+
+            footer li {
+                display: inline;
+            }
+
+            footer p {
+                border-radius: 0;
             }
         }
     </style>
@@ -757,6 +788,36 @@
     </main>
 
     <footer>
+        <div class="enlaces-contacto">
+            <a href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/" target="_blank"
+                rel="noopener noreferrer" title="Ir al sitio web de Linkedin">
+                <img src="icon/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
+                    title="Ir al sitio web de Linkedin">
+            </a>
+            <a href="https://github.com/esdrasmh" target="_blank" rel="noopener noreferrer"
+                title="Ir al sitio web de GitHub">
+                <img src="icon/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
+                    title="Ir al sitio web de GitHub">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#sobre-mi" title="Ir a la sección sobre mí">Sobre mí</a>
+                </li>
+                <li>
+                    <a href="#experiencia" title="Ir a la sección de experiencia">Experiencia</a>
+                </li>
+                <li>
+                    <a href="#educacion" title="Ir a la sección de educación">Educación</a>
+                </li>
+                <li>
+                    <a href="#habilidades" title="Ir a la sección de habilidades">Habilidades</a>
+                </li>
+            </ul>
+        </nav>
+
         <p>2024 - Esdras Malavé</p>
     </footer>
 
