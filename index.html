@@ -12,422 +12,15 @@
     <meta name="robots" content="index, follow">
     <title>Esdras Malavé | Ingeniero de Sistemas | Desarrollador Frontend</title>
     <link rel="sitemap" type="application/xml" href="https://www.esdrasmalave.com/sitemap.xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45_dJE3gTD_vx3rCubqg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-
-    <style>
-        :root {
-            /* Colores primarios */
-            --black-primary: #1A1A1A;
-            --blue-primary: #647eff;
-            --gray-primary: #545454;
-            --green-primary: #42B883;
-            --white-primary: #FFFFFF;
-
-            /* Colores secundarios */
-            --black-secondary: #242424;
-            --blue-secondary: #AAC8E4;
-            --gray-secondary: #EBEBEB;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--black-primary);
-            color: var(--gray-secondary);
-            font-family: 'Montserrat', sans-serif;
-            font-display: swap;
-        }
-
-        header,
-        main,
-        footer {
-            width: 100%;
-            max-width: 768px;
-            margin: 0 auto;
-        }
-
-        /* Cabecera de página */
-        header {
-            border-bottom: 1px solid var(--gray-primary);
-        }
-
-        header button {
-            display: none;
-            width: 44px;
-            height: 44px;
-            margin-top: 12px;
-            margin-left: calc(100% - 56px);
-            padding: 4px;
-            background-color: var(--black-primary);
-            border: 2px solid var(--gray-secondary);
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        header .icono-menu-abrir {
-            display: block;
-        }
-
-        header .icono-menu-cerrar {
-            display: none;
-        }
-
-        header nav, footer nav {
-            text-align: right;
-        }
-
-        header nav.menu-abierto {
-            display: block;
-        }
-
-        header ul, footer ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        header li, footer li {
-            display: inline-block;
-        }
-
-        header a, footer nav a {
-            display: block;
-            color: var(--gray-secondary);
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        header a:hover, footer nav a:hover {
-            color: var(--green-primary);
-        }
-
-        main {
-            padding: 0 24px;
-            box-sizing: border-box;
-        }
-
-        /* Sección principal */
-        .seccion-principal,
-        .seccion-principal-movil {
-            border-bottom-width: 1px;
-            border-bottom-style: solid;
-            border-image: linear-gradient(to right, var(--green-primary), var(--blue-primary));
-            border-image-slice: 1;
-        }
-
-        .seccion-principal h1,
-        .seccion-principal-movil h1 {
-            background: linear-gradient(45deg, var(--green-primary), var(--blue-primary));
-            background-clip: text;
-            color: transparent;
-        }
-
-        .seccion-principal h1 span,
-        .seccion-principal-movil h1 span {
-            display: block;
-        }
-
-        .enlaces-contacto {
-            float: right;
-        }
-
-        .enlaces-contacto a {
-            text-decoration: none;
-            margin-right: 20px;
-        }
-
-        .enlaces-contacto img {
-            background: linear-gradient(45deg, var(--green-primary), var(--blue-primary));
-            border-radius: 4px;
-            box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.4);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .enlaces-contacto img:hover {
-            box-shadow: 0 0 12px 1px rgba(255, 255, 255, 8);
-        }
-
-        .seccion-principal {
-            padding: 88px 0;
-        }
-
-        .seccion-principal h1 {
-            font-size: 32px;
-        }
-
-        .seccion-principal h1 span {
-            font-size: 20px;
-        }
-
-        .seccion-principal-movil {
-            display: none;
-        }
-
-        .seccion-principal-movil {
-            padding: 0 0 64px;
-        }
-
-        .seccion-principal-movil h1 {
-            font-size: 24px;
-            margin-bottom: 32px;
-        }
-
-        .seccion-principal-movil h1 span {
-            margin: 12px 0;
-            font-size: 16px;
-        }
-
-        section h2 {
-            color: var(--green-primary);
-        }
-
-        /* Sección sobre mí */
-        .seccion-sobre-mi p em {
-            font-style: normal;
-            color: var(--blue-secondary);
-        }
-
-        /* Sección de experiencia */
-        .seccion-experiencia ul {
-            background-color: var(--black-secondary);
-            padding: 8px 40px 24px;
-            border-radius: 8px;
-        }
-
-        .empresa-cliente a,
-        .empresa-cliente a:visited {
-            color: var(--blue-secondary);
-            transition: color 0.3s ease;
-        }
-
-        .empresa-cliente a:hover {
-            color: var(--blue-primary);
-        }
-
-        .empresa-cliente span {
-            display: block;
-        }
-
-        .empresa-cliente~p {
-            margin: 12px 0;
-        }
-
-        .responsabilidades li::marker {
-            color: var(--blue-secondary);
-        }
-
-        .tecnologias {
-            padding: 0;
-        }
-
-        .tecnologias li {
-            display: inline-block;
-            margin: 4px 0;
-            padding: 6px 18px;
-            background-color: #1A1A1A;
-            border-radius: 16px;
-            color: var(--blue-secondary);
-            border: 1px solid var(--blue-secondary);
-        }
-
-        /* Seccion educación */
-        .educacion-superior p,
-        .educacion-cursos p {
-            margin: 12px 0;
-            padding-left: 40px;
-        }
-
-        .educacion-superior a,
-        .educacion-cursos a,
-        .educacion-superior a:visited,
-        .educacion-cursos a:visited {
-            color: var(--blue-secondary);
-            transition: color 0.3s ease;
-        }
-
-        .educacion-superior a:hover,
-        .educacion-cursos a:hover {
-            color: var(--blue-primary);
-        }
-
-        .educacion-cursos table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        .educacion-cursos table th,
-        .educacion-cursos table td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid var(--gray-secondary);
-        }
-
-        /* Seccion habilidades */
-        .seccion-habilidades div {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-        }
-
-        .seccion-habilidades .habilidades-tecnicas,
-        .seccion-habilidades .habilidades-blandas {
-            padding: 8px 16px;
-        }
-
-        .seccion-habilidades .habilidades-tecnicas {
-            background-color: #242424;
-            border-radius: 8px;
-        }
-
-        .seccion-habilidades .habilidades-tecnicas ul,
-        .seccion-habilidades .habilidades-blandas ul {
-            padding: 0;
-        }
-
-        .seccion-habilidades .habilidades-tecnicas ul {
-            list-style: none;
-        }
-
-        .seccion-habilidades .habilidades-blandas ul li {
-            margin-bottom: 4px;
-        }
-
-        /* Pie de página */
-        footer {
-            margin-top: 134px;
-            color: var(--gray-secondary);
-            text-align: center;
-            border-top: 1px solid var(--gray-primary);
-        }
-
-        footer .enlaces-contacto {
-            margin-top: -88px;
-            margin-right: 12px;
-        }
-
-        footer nav a {
-            margin-bottom: 50px;
-        }
-
-        footer p {
-            padding: 12px;
-            border-radius: 8px;
-            background-color: var(--black-secondary);
-        }
-
-        @media screen and (max-width: 520px) {
-            header {
-                border-bottom: none;
-            }
-
-            header button {
-                display: block;
-            }
-
-            header nav {
-                display: none;
-                position: absolute;
-                width: 100%;
-                height: calc(100vh - 44px);
-                background-color: rgba(255, 255, 255, 0.32);
-            }
-
-            header ul {
-                width: inherit;
-                background-color: var(--black-secondary);
-            }
-
-            header li {
-                display: block;
-                border-bottom: 2px solid var(--black-primary);
-            }
-
-            header li:last-child {
-                border-bottom: none;
-            }
-
-            section h2 {
-                margin: 14px 0;
-            }
-
-            .seccion-principal {
-                display: none;
-            }
-
-            .seccion-principal-movil {
-                display: block;
-            }
-
-            .seccion-experiencia .empresa-cliente,
-            .educacion-superior h3,
-            .educacion-cursos h3,
-            .habilidades-tecnicas h3,
-            .habilidades-blandas h3 {
-                margin: 12px 0;
-            }
-
-            .seccion-experiencia p,
-            .educacion-superior p {
-                margin: 6px 0;
-            }
-
-            .seccion-experiencia ul {
-                padding: 8px 28px;
-            }
-
-            .seccion-experiencia .responsabilidades,
-            .seccion-experiencia .tecnologias {
-                padding: 8px 24px;
-            }
-
-            .seccion-habilidades div {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .educacion-superior p {
-                padding-left: 8px;
-            }
-
-            footer {
-                margin-top: 120px;
-            }
-
-            footer .enlaces-contacto {
-                margin-right: 24px;
-            }
-
-            footer nav {
-                text-align: center;
-            }
-
-            footer nav a {
-                margin-bottom: 0;
-            }
-
-            footer li {
-                display: inline;
-            }
-
-            footer p {
-                border-radius: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
     <header>
         <button type="button" onclick="abrirMenu()">
-            <img class="icono-menu-abrir" src="icon/menu.svg" alt="Abrir menu de opciones de navegación" width="32px"
+            <img class="icono-menu-abrir" src="icons/menu.svg" alt="Abrir menu de opciones de navegación" width="32px"
                 height="32px" title="Abrir menu de opciones de navegación">
-            <img class="icono-menu-cerrar" src="icon/cerrar.svg" alt="Cerrar menu de opciones de navegación"
+            <img class="icono-menu-cerrar" src="icons/cerrar.svg" alt="Cerrar menu de opciones de navegación"
                 width="32px" height="32px" title="Cerrar menu de opciones de navegación">
         </button>
 
@@ -463,12 +56,12 @@
             <div class="enlaces-contacto">
                 <a href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/" target="_blank"
                     rel="noopener noreferrer" title="Ir al sitio web de Linkedin">
-                    <img src="icon/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
+                    <img src="icons/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
                         title="Ir al sitio web de Linkedin">
                 </a>
                 <a href="https://github.com/esdrasmh" target="_blank" rel="noopener noreferrer"
                     title="Ir al sitio web de GitHub">
-                    <img src="icon/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
+                    <img src="icons/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
                         title="Ir al sitio web de GitHub">
                 </a>
             </div>
@@ -483,12 +76,12 @@
             <div class="enlaces-contacto">
                 <a href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/" target="_blank"
                     rel="noopener noreferrer" title="Ir al sitio web de Linkedin">
-                    <img src="icon/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
+                    <img src="icons/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
                         title="Ir al sitio web de Linkedin">
                 </a>
                 <a href="https://github.com/esdrasmh" target="_blank" rel="noopener noreferrer"
                     title="Ir al sitio web de GitHub">
-                    <img src="icon/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
+                    <img src="icons/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
                         title="Ir al sitio web de GitHub">
                 </a>
             </div>
@@ -564,7 +157,8 @@
                         <li>Migre templetes Pug a HTML.</li>
                         <li>Corregí advertencias de Sonar Cloud.</li>
                         <li>Participe en reuniones para refinar, estimar y asignar tareas.</li>
-                        <li>Apoye a otros desarrolladores con menos experiencia en frontend para la realización de tareas.</li>
+                        <li>Apoye a otros desarrolladores con menos experiencia en frontend para la realización de
+                            tareas.</li>
                     </ul>
                     <p>Tecnologías:</p>
                     <ul class="tecnologias">
@@ -601,7 +195,8 @@
                         <li>Migre App hibrida para Android e IOS.</li>
                         <li>Integre API's.</li>
                         <li>Participe en reuniones con el cliente para definir requerimientos.</li>
-                        <li>Apoye a otros desarrolladores con menos experiencia en frontend para la realización de tareas.</li>
+                        <li>Apoye a otros desarrolladores con menos experiencia en frontend para la realización de
+                            tareas.</li>
                         <li>Revise y probe tareas de otros desarrolladores para integrarlas a producción.</li>
                         <li>Compilé y desplegué versiones de prueba para Android e IOS con Firesabe.</li>
                     </ul>
@@ -710,7 +305,8 @@
                             <td>Hola Mundo</td>
                             <td><time datetime="2024-05">05/2024</time></td>
                             <td><a href="https://academia.holamundo.io/certificates/hb2jccywwf" target="_blank"
-                                    rel="noopener noreferrer" title="Ver certificado de TypeScript">Ultimate Git + GitHub</a></td>
+                                    rel="noopener noreferrer" title="Ver certificado de TypeScript">Ultimate Git +
+                                    GitHub</a></td>
                         </tr>
                         <tr>
                             <td>Hola Mundo</td>
@@ -804,12 +400,12 @@
         <div class="enlaces-contacto">
             <a href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/" target="_blank"
                 rel="noopener noreferrer" title="Ir al sitio web de Linkedin">
-                <img src="icon/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
+                <img src="icons/linkedin.svg" alt="Ir al sitio web de Linkedin" width="44" height="44"
                     title="Ir al sitio web de Linkedin">
             </a>
             <a href="https://github.com/esdrasmh" target="_blank" rel="noopener noreferrer"
                 title="Ir al sitio web de GitHub">
-                <img src="icon/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
+                <img src="icons/github.svg" alt="Ir al sitio web de GitHub" width="44" height="44"
                     title="Ir al sitio web de GitHub">
             </a>
         </div>
@@ -834,36 +430,5 @@
         <p>2024 - Esdras Malavé</p>
     </footer>
 
-    <script>
-        const body = document.querySelector('body')
-        const iconoAbrir = document.querySelector('header button img.icono-menu-abrir')
-        const iconoCerrar = document.querySelector('header button img.icono-menu-cerrar')
-        const menuOpciones = document.querySelector('header nav')
-        const opciones = document.querySelectorAll('header nav ul li')
-        const estilos = window.getComputedStyle(menuOpciones)
-
-        function abrirMenu() {
-            if (estilos.display !== 'none') return cerrarMenu()
-
-            body.style.overflow = 'hidden'
-            iconoAbrir.style.display = 'none'
-            iconoCerrar.style.display = 'block'
-            menuOpciones.classList.add('menu-abierto')
-
-            opciones.forEach(o => {
-                o.addEventListener('click', () => cerrarMenu())
-            })
-        }
-
-        function cerrarMenu() {
-            body.style.overflow = 'auto'
-            iconoAbrir.style.display = 'block'
-            iconoCerrar.style.display = 'none'
-            menuOpciones.classList.remove('menu-abierto')
-
-            opciones.forEach(o => {
-                o.removeEventListener('click', () => cerrarMenu())
-            })
-        }
-    </script>
+    <script src="./index.js"></script>
 </body>
