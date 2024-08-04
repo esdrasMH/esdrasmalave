@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <script
+      nonce="ZP4ABA8p2M"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JWWW8SG0FM"
+    ></script>
+    <script nonce="ZP4ABA8p2M">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JWWW8SG0FM");
+    </script>
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -26,7 +39,13 @@
 
   <body>
     <header>
-      <button type="button" onclick="abrirMenu()">
+      <button
+        type="button"
+        onclick="abrirMenu();   gtag('event', 'click', {
+        event_category: 'Button',
+        event_label: 'Abrir Menu',
+      });"
+      >
         <img
           class="icono-menu-abrir"
           src="icons/menu.svg"
@@ -44,26 +63,39 @@
           title="Cerrar menu de opciones de navegación"
         />
       </button>
-
       <nav>
         <ul>
           <li>
-            <a href="#experiencia" title="Ir a la sección de experiencia"
+            <a
+              href="#experiencia"
+              title="Ir a la sección de experiencia"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Experiencia'})"
               >Experiencia</a
             >
           </li>
           <li>
-            <a href="#educacion" title="Ir a la sección de educación"
+            <a
+              href="#educacion"
+              title="Ir a la sección de educación"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Educación'})"
               >Educación</a
             >
           </li>
           <li>
-            <a href="#habilidades" title="Ir a la sección de habilidades"
+            <a
+              href="#habilidades"
+              title="Ir a la sección de habilidades"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Habilidades'})"
               >Habilidades</a
             >
           </li>
           <li>
-            <a href="#sobre-mi" title="Ir a la sección sobre mí">Sobre mí</a>
+            <a
+              href="#sobre-mi"
+              title="Ir a la sección sobre mí"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Sobre mí'})"
+              >Sobre mí</a
+            >
           </li>
         </ul>
       </nav>
@@ -537,6 +569,7 @@
           target="_blank"
           rel="noopener noreferrer"
           title="Ir al sitio web de Linkedin"
+          onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'LinkedIn'})"
         >
           <img
             src="icons/linkedin.svg"
@@ -550,6 +583,7 @@
           target="_blank"
           rel="noopener noreferrer"
           title="Ir al sitio web de GitHub"
+          onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'GitHub'})"
         >
           <img
             src="icons/github.svg"
@@ -559,10 +593,9 @@
           <span>GitHub</span>
         </a>
       </div>
-
       <p>2024 - Esdras Malavé</p>
     </footer>
 
-    <script src="./index.js"></script>
+    <script nonce="ZP4ABA8p2M" src="./index.js"></script>
   </body>
 </html>
