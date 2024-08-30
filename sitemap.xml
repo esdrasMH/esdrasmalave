@@ -5,4 +5,28 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    
+    <url>
+        <loc>https://www.esdrasmalave.com/#experiencia</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+        <url>
+        <loc>https://www.esdrasmalave.com/#proyectos</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.esdrasmalave.com/#sobre-mi</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.esdrasmalave.com/#contacto</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
