@@ -75,18 +75,10 @@
           </li>
           <li>
             <a
-              href="#educacion"
-              title="Ir a la sección de educación"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Educación'})"
-              >Educación</a
-            >
-          </li>
-          <li>
-            <a
-              href="#habilidades"
-              title="Ir a la sección de habilidades"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Habilidades'})"
-              >Habilidades</a
+              href="#proyectos"
+              title="Ir a la sección de proyectos"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Proyectos'})"
+              >Proyectos</a
             >
           </li>
           <li>
@@ -95,6 +87,14 @@
               title="Ir a la sección sobre mí"
               onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Sobre mí'})"
               >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              title="Ir a la sección de contacto"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Contacto'})"
+              >Contacto</a
             >
           </li>
         </ul>
@@ -385,170 +385,95 @@
         </ul>
       </section>
 
-      <section class="seccion-educacion">
-        <h2 id="educacion">Educación</h2>
-        <section class="educacion-superior">
-          <h3>Estudio universitario</h3>
-          <p>
-            Instituto:
-            <a
-              href="http://www.udo.edu.ve"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Ir al sitio web de Universidad de Oriente"
-              >Universidad de Oriente</a
-            >
-          </p>
-          <p>
-            Periodo: <time datetime="2011-05">05/2011</time> a
-            <time datetime="2018-12">12/2018</time>
-          </p>
-          <p>Título: Ingeniero de Sistemas</p>
-        </section>
-        <section class="educacion-cursos">
-          <h3>Cursos</h3>
-          <table>
-            <thead>
-              <th>Academia</th>
-              <th>Expedición</th>
-              <th>Nombre</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Hola Mundo</td>
-                <td><time datetime="2024-05">05/2024</time></td>
-                <td>
-                  <a
-                    href="https://academia.holamundo.io/certificates/hb2jccywwf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ver certificado de TypeScript"
-                    >Ultimate Git + GitHub</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Hola Mundo</td>
-                <td><time datetime="2024-05">05/2024</time></td>
-                <td>
-                  <a
-                    href="https://academia.holamundo.io/certificates/8eohu869yh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ver certificado de TypeScript"
-                    >TypeScript: sin fronteras</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Hola Mundo</td>
-                <td><time datetime="2024-02">02/2024</time></td>
-                <td>
-                  <a
-                    href="https://academia.holamundo.io/certificates/ljk0ztlmut"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ver certificado de JavaScript"
-                    >Ultimate JavaScript</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Hola Mundo</td>
-                <td><time datetime="2024-01">01/2024</time></td>
-                <td>
-                  <a
-                    href="https://academia.holamundo.io/certificates/7xqebykmzt"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ver certificado de CSS3"
-                    >CSS3: sin fronteras</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Hola Mundo</td>
-                <td><time datetime="2024-01">01/2024</time></td>
-                <td>
-                  <a
-                    href="https://academia.holamundo.io/certificates/nmhf3gbiir"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ver certificado de HTML5"
-                    >HTML5: sin fronteras</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Udemy</td>
-                <td><time datetime="2024-01">01/2024</time></td>
-                <td>
-                  <a
-                    href="https://www.udemy.com/certificate/UC-97a8f19d-66e6-4041-bdb0-1728afe432ab"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ver certificado de Vue.js 3"
-                    >Vue js 3 Desde cero + Vite + Firebase 9 + MEVN</a
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </section>
+      <section class="seccion-proyectos">
+        <h2 id="proyectos">Proyectos</h2>
+        <ul>
+          <li>
+            <div class="contenedor-imagen">
+              <a
+                href="https://cordonerialama.cl"
+                target="_blank"
+                title="Ir al sitio web de Cordonería Lama"
+              >
+                <img
+                  loading="lazy"
+                  src="./img/cordoneria-lama.png"
+                  alt="Ir al sitio web de Cordonería Lama"
+                />
+              </a>
+            </div>
 
-      <section class="seccion-habilidades">
-        <h2 id="habilidades">Habilidades</h2>
-        <div>
-          <section class="habilidades-tecnicas">
-            <h3>Habilidades Técnicas</h3>
-            <ul class="tecnologias">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Stylus</li>
-              <li>Sass</li>
-              <li>Bootstrap</li>
-              <li>Vuetify</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>Vue.js</li>
-              <li>React</li>
-              <li>Fetch API</li>
-              <li>Axios</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-              <li>Git</li>
-              <li>Clean code</li>
-              <li>Accesibilidad</li>
-              <li>Semántica</li>
-              <li>SEO</li>
-              <li>Integración de API's</li>
-              <li>Diseño responsive</li>
-              <li>Buenas practicas</li>
-              <li>Principios SOLID</li>
-            </ul>
-          </section>
-          <section class="habilidades-blandas">
-            <h3>Habilidades Blandas</h3>
-            <ul>
-              <li>Resolución de problemas</li>
-              <li>Trabajo en equipo</li>
-              <li>Comunicación efectiva</li>
-              <li>Pensamiento crítico</li>
-              <li>Capacidad de planificación</li>
-              <li>Orientado a resultados</li>
-            </ul>
-          </section>
-        </div>
+            <div class="contenedor-descripcion">
+              <h3>CordoneriaLama</h3>
+              <p>
+                Este proyecto permitió automatizar las solicitudes de pedidos
+                realizados por clientes mayoristas en la empresa Albornoz y Lama
+                SPA.
+              </p>
+              <p>Tecnologías:</p>
+              <ul class="tecnologias">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Vue.js</li>
+                <li>Vuetify</li>
+                <li>Pinia</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>Moogose</li>
+                <li>SendGrid</li>
+                <li>Zoho</li>
+                <li>Netlify</li>
+                <li>Render</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="contenedor-imagen">
+              <a
+                href="https://simpli-post.netlify.app"
+                target="_blank"
+                title="Ir al sitio web de SimpliPost"
+              >
+                <img
+                  loading="lazy"
+                  src="./img/simpli-post-white.png"
+                  alt="Ir al sitio web de SimpliPost"
+                />
+              </a>
+            </div>
+
+            <div class="contenedor-descripcion">
+              <h3>SimpliPost</h3>
+              <p>
+                Proyecto de código abierto que integra IA generativa de Google
+                Cloud para ayudar a estructurar de forma rápida vacantes de
+                empleo.
+              </p>
+              <p>Tecnologías:</p>
+              <ul class="tecnologias">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Vue.js</li>
+                <li>Vuetify</li>
+                <li>Google Generative AI</li>
+                <li>Google Analytics</li>
+                <li>Netlify</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section class="seccion-sobre-mi">
         <h2 id="sobre-mi">Sobre mí</h2>
         <p>
-          En 2012 inicie en el mundo de TI con el área de soporte y redes, luego
-          de seis años me titule como
-          <em>Ingeniero de Sistemas</em>, mismo tiempo que llevo como
+          En 2018 me titule como
+          <em>Ingeniero de Sistemas</em>, mismo año en que inicie como
           desarrollador. He colaborado en más de diez proyectos con equipos
           pequeños, medianos y grandes bajo metodologías agiles y tradicionales.
         </p>
@@ -559,40 +484,107 @@
           Angular. Cada día me preocupo por mejorar mis habilidades en
           <em>semántica, accesibilidad, rendimiento y SEO</em>.
         </p>
+
+        <div class="enlaces-contacto">
+          <a
+            href="files/cv.pdf"
+            download="EsdrasMalave_CV.pdf"
+            title="Descargar CV"
+            onclick="gtag('event', 'click', {'event_category': 'Download', 'event_label': 'DescargarCV'})"
+          >
+            <img
+              src="icons/descargar.svg"
+              alt="Descargar CV"
+              title="Descargar CV"
+            />
+            <span>Descargar CV</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir al sitio web de Linkedin"
+            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'LinkedIn'})"
+          >
+            <img
+              src="icons/linkedin.svg"
+              alt="Ir al sitio web de Linkedin"
+              title="Ir al sitio web de Linkedin"
+            />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/esdrasmh"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir al sitio web de GitHub"
+            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'GitHub'})"
+          >
+            <img
+              src="icons/github.svg"
+              alt="Ir al sitio web de GitHub"
+              title="Ir al sitio web de GitHub"
+            />
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="seccion-contacto">
+        <h2 id="contacto">Contacto</h2>
+
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onsubmit="manejadorEnvio(event)"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <label for="nombre">Nombre *</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            minlength="3"
+            placeholder="José García"
+            required
+          />
+
+          <label for="correo">Correo *</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="jgarcia@gmail.com"
+            required
+          />
+
+          <label for="mensaje">Mensaje *</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+
+          <small>* Campos obligatorios</small>
+
+          <button type="submit">Enviar</button>
+        </form>
+
+        <div class="mensaje-exitoso">
+          <p>¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.</p>
+        </div>
+
+        <div class="mensaje-error">
+          <p>Ocurrió un error. Por favor, inténtalo de nuevo.</p>
+        </div>
       </section>
     </main>
 
     <footer>
-      <div class="enlaces-contacto">
-        <a
-          href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Ir al sitio web de Linkedin"
-          onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'LinkedIn'})"
-        >
-          <img
-            src="icons/linkedin.svg"
-            alt="Ir al sitio web de Linkedin"
-            title="Ir al sitio web de Linkedin"
-          />
-          <span>LinkedIn</span>
-        </a>
-        <a
-          href="https://github.com/esdrasmh"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Ir al sitio web de GitHub"
-          onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'GitHub'})"
-        >
-          <img
-            src="icons/github.svg"
-            alt="Ir al sitio web de GitHub"
-            title="Ir al sitio web de GitHub"
-          />
-          <span>GitHub</span>
-        </a>
-      </div>
       <p>2024 - Esdras Malavé</p>
     </footer>
 

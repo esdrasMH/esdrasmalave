@@ -31,6 +31,30 @@ function cerrarMenu() {
   });
 }
 
+function manejadorEnvio(event) {
+  event.preventDefault();
+
+  const form = event.target;
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString(),
+  })
+    .then(() => {
+      document.querySelector(".mensaje-exitoso").style.display = "block";
+      form.reset();
+    })
+    .catch(() => {
+      document.querySelector(".mensaje-error").style.display = "block";
+    });
+
+  gtag("event", "click", {
+    event_category: "Form",
+    event_label: "Enviar",
+  });
+}
+
 document.addEventListener("scroll", function () {
   const experiencia = document.querySelector("#experiencia");
   const educacion = document.querySelector("#educacion");
