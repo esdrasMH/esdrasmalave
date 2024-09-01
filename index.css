@@ -203,7 +203,7 @@ section h2 {
 }
 
 /* Sección de experiencia */
-.seccion-experiencia ul {
+.seccion-experiencia > ul {
   background-color: var(--black-secondary);
   padding: 8px 40px 24px;
   border-radius: 8px;
@@ -233,6 +233,10 @@ section h2 {
 
 .empresa-cliente ~ p {
   margin: 12px 0;
+}
+
+.responsabilidades {
+  padding: 8px 20px 24px;
 }
 
 .responsabilidades li::marker {
@@ -296,6 +300,13 @@ section h2 {
 .seccion-sobre-mi p em {
   font-style: normal;
   color: var(--blue-secondary);
+}
+
+.seccion-sobre-mi img {
+  width: 100%;
+  max-width: 768px;
+  aspect-ratio: 384/257;
+  border-radius: 8px;
 }
 
 .seccion-sobre-mi .enlaces-contacto {
@@ -445,7 +456,7 @@ footer p {
     padding: 0 20px;
   }
 
-  .seccion-experiencia ul {
+  .seccion-experiencia > ul {
     padding: 8px 24px 24px;
   }
 
