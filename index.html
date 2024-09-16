@@ -67,6 +67,22 @@
         <ul>
           <li>
             <a
+              href="#sobre-mi"
+              title="Ir a la sección sobre mí"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Sobre mí'})"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href="#servicios"
+              title="Ir a la sección servicios"
+              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Servicios'})"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
               href="#experiencia"
               title="Ir a la sección de experiencia"
               onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Experiencia'})"
@@ -79,14 +95,6 @@
               title="Ir a la sección de proyectos"
               onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Proyectos'})"
               >Proyectos</a
-            >
-          </li>
-          <li>
-            <a
-              href="#sobre-mi"
-              title="Ir a la sección sobre mí"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Sobre mí'})"
-              >Sobre mí</a
             >
           </li>
           <li>
@@ -120,6 +128,146 @@
             >Desarrollador Frontend con +6 años de experiencia</span
           >
         </h1>
+      </section>
+
+      <section class="seccion-sobre-mi">
+        <h2 id="sobre-mi">Sobre mí</h2>
+
+        <div class="contenedor-descripcion">
+          <p class="descripcion">
+            Me especialice como <em>Desarrollador Frontend</em>. He colaborado
+            en más de 15 proyectos con equipos pequeños, medianos y grandes bajo
+            metodologías agiles y tradicionales. Me enfoco principalmente en
+            garantizar buen
+            <em
+              >diseño adaptativo, semántica, accesibilidad, rendimiento y
+              SEO</em
+            >; con la finalidad de ofrecer la mejor experiencia a los usuarios.
+          </p>
+
+          <img
+            src="./img/foto.png"
+            alt="Foto en el Cerro Manquegue"
+            class="mi-foto"
+          />
+        </div>
+
+        <div class="enlaces-contacto">
+          <a
+            href="files/cv.pdf"
+            download="EsdrasMalave_CV.pdf"
+            title="Descargar archivo EsdrasMalave_CV.pdf"
+            onclick="gtag('event', 'click', {'event_category': 'Download', 'event_label': 'DescargarCV'})"
+          >
+            <img
+              src="icons/descargar.svg"
+              alt="Descargar archivo EsdrasMalave_CV.pdf"
+              title="Descargar archivo EsdrasMalave_CV.pdf"
+            />
+            <span>Descargar CV</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir al sitio web de Linkedin"
+            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'LinkedIn'})"
+          >
+            <img
+              src="icons/linkedin.svg"
+              alt="Ir al sitio web de Linkedin"
+              title="Ir al sitio web de Linkedin"
+            />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/esdrasmh"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir al sitio web de GitHub"
+            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'GitHub'})"
+          >
+            <img
+              src="icons/github.svg"
+              alt="Ir al sitio web de GitHub"
+              title="Ir al sitio web de GitHub"
+            />
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="servicios">
+        <h2 id="servicios">Servicios</h2>
+
+        <details name="servicio">
+          <summary>Diseño y desarrollo de páginas web</summary>
+          <p>
+            Ofrezco la creación de sitios web modernos y adaptativos utilizando
+            tecnologías como HTML5, CSS3 y JavaScript, así como frameworks
+            avanzados como Vue.js, React y Angular. Mi enfoque garantiza que tu
+            página sea visualmente atractiva y funcional en cualquier
+            dispositivo.
+          </p>
+        </details>
+
+        <details name="servicio">
+          <summary>Migración y mantenimiento de sitios web</summary>
+          <p>
+            Facilito la migración de sitios web y aplicaciones a tecnologías
+            modernas, como pasar de jQuery a Vue.js, React o Angular. También me
+            encargo de corregir errores, mantener y actualizar sitios web
+            existentes para garantizar su funcionamiento óptimo.
+          </p>
+        </details>
+
+        <details name="servicio">
+          <summary>Optimización de rendimiento web</summary>
+          <p>
+            Me dedico a reducir el tiempo de carga de tu sitio web, mejorando
+            así la experiencia del usuario. Implemento técnicas para que tu
+            página funcione de manera más rápida y eficiente.
+          </p>
+        </details>
+
+        <details name="servicio">
+          <summary>Optimización de SEO</summary>
+          <p>
+            Implemento estrategias para mejorar el posicionamiento de tu sitio
+            web en los motores de búsqueda. Esto incluye diversas técnicas para
+            aumentar la visibilidad y atraer más visitantes.
+          </p>
+        </details>
+
+        <details name="servicio">
+          <summary>Accesibilidad web</summary>
+          <p>
+            Aseguro que tu sitio web sea accesible para todos los usuarios,
+            siguiendo los estándares de accesibilidad WCAG. Implemento buenas
+            prácticas para que tu contenido sea usable por personas con
+            discapacidades.
+          </p>
+        </details>
+
+        <details name="servicio">
+          <summary>Consultoría y asesoramiento técnico</summary>
+          <p>
+            Ofrezco consultoría para mejorar el diseño adaptativo, la semántica,
+            la accesibilidad, el rendimiento y el SEO de tu sitio web.
+            Proporciono recomendaciones prácticas para optimizar todos estos
+            aspectos.
+          </p>
+        </details>
+
+        <details name="servicio">
+          <summary>Mentoría y capacitación</summary>
+          <p>
+            Brindo mentoría a desarrolladores novatos y capacitación en las
+            mejores prácticas del desarrollo frontend y herramientas modernas.
+            Mi objetivo es ayudar a los desarrolladores a mejorar sus
+            habilidades y conocimientos.
+          </p>
+        </details>
       </section>
 
       <section class="seccion-experiencia">
@@ -536,73 +684,6 @@
         </ul>
       </section>
 
-      <section class="seccion-sobre-mi">
-        <h2 id="sobre-mi">Sobre mí</h2>
-        <p>
-          En 2018 me titule como
-          <em>Ingeniero de Sistemas</em>, mismo año en que inicie como
-          desarrollador. He colaborado en más de diez proyectos con equipos
-          pequeños, medianos y grandes bajo metodologías agiles y tradicionales.
-        </p>
-        <p>
-          Me especialice como <em>Desarrollador Frontend Web</em>,
-          particularmente con el <em>ecosistema de Vue.js</em>, también he
-          contribuido en equipos con otras tecnologías similares como React y
-          Angular. Cada día me preocupo por mejorar mis habilidades en
-          <em>semántica, accesibilidad, rendimiento y SEO</em>.
-        </p>
-
-        <img
-          loading="lazy"
-          src="./img/foto.png"
-          alt="Foto en el Cerro Manquegue"
-        />
-
-        <div class="enlaces-contacto">
-          <a
-            href="files/cv.pdf"
-            download="EsdrasMalave_CV.pdf"
-            title="Descargar archivo EsdrasMalave_CV.pdf"
-            onclick="gtag('event', 'click', {'event_category': 'Download', 'event_label': 'DescargarCV'})"
-          >
-            <img
-              src="icons/descargar.svg"
-              alt="Descargar archivo EsdrasMalave_CV.pdf"
-              title="Descargar archivo EsdrasMalave_CV.pdf"
-            />
-            <span>Descargar CV</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ir al sitio web de Linkedin"
-            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'LinkedIn'})"
-          >
-            <img
-              src="icons/linkedin.svg"
-              alt="Ir al sitio web de Linkedin"
-              title="Ir al sitio web de Linkedin"
-            />
-            <span>LinkedIn</span>
-          </a>
-          <a
-            href="https://github.com/esdrasmh"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ir al sitio web de GitHub"
-            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'GitHub'})"
-          >
-            <img
-              src="icons/github.svg"
-              alt="Ir al sitio web de GitHub"
-              title="Ir al sitio web de GitHub"
-            />
-            <span>GitHub</span>
-          </a>
-        </div>
-      </section>
-
       <section class="seccion-contacto">
         <h2 id="contacto">Contacto</h2>
 
@@ -662,5 +743,54 @@
     </footer>
 
     <script nonce="ZP4ABA8p2M" src="./index.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Service",
+        "serviceType": "Desarrollo Web",
+        "provider": {
+          "@type": "Organization",
+          "name": "Esdras Malavé",
+          "url": "https://esdrasmalave.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Diseño y desarrollo de páginas web",
+            "description": "Creación de sitios web modernos y adaptativos utilizando tecnologías como HTML5, CSS3 y JavaScript, así como frameworks avanzados como Vue.js, React y Angular."
+          },
+          {
+            "@type": "Offer",
+            "name": "Migración y mantenimiento de sitios web",
+            "description": "Migración de sitios web y aplicaciones a tecnologías modernas, corrección de errores, mantenimiento y actualización de sitios web existentes."
+          },
+          {
+            "@type": "Offer",
+            "name": "Optimización de rendimiento web",
+            "description": "Reducción del tiempo de carga de sitios web para mejorar la experiencia del usuario."
+          },
+          {
+            "@type": "Offer",
+            "name": "Optimización de SEO",
+            "description": "Implementación de estrategias para mejorar el posicionamiento de sitios web en los motores de búsqueda."
+          },
+          {
+            "@type": "Offer",
+            "name": "Accesibilidad web",
+            "description": "Implementación de buenas prácticas para que el sitio sea accesible para todas las personas, cumpliendo con los estándares WCAG."
+          },
+          {
+            "@type": "Offer",
+            "name": "Consultoría y asesoramiento técnico",
+            "description": "Consultoría para mejorar el diseño adaptativo, semántica, accesibilidad, rendimiento y SEO de sitios web."
+          },
+          {
+            "@type": "Offer",
+            "name": "Mentoría y capacitación",
+            "description": "Mentoría a desarrolladores novatos y capacitación en mejores prácticas en desarrollo frontend y herramientas modernas."
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
