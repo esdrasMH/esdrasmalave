@@ -1,88 +1,54 @@
-const body = document.querySelector("body");
-const iconoAbrir = document.querySelector("header button img.icono-menu-abrir");
-const iconoCerrar = document.querySelector(
-  "header button img.icono-menu-cerrar"
-);
-const menuOpciones = document.querySelector("header nav");
-const opciones = document.querySelectorAll("header nav ul li");
-const estilos = window.getComputedStyle(menuOpciones);
-
-function abrirMenu() {
-  if (estilos.display !== "none") return cerrarMenu();
-
-  body.style.overflow = "hidden";
-  iconoAbrir.style.display = "none";
-  iconoCerrar.style.display = "block";
-  menuOpciones.classList.add("menu-abierto");
-
-  opciones.forEach((o) => {
-    o.addEventListener("click", () => cerrarMenu());
-  });
+const botonMenu = document.querySelector(".boton-menu");
+const navegacion = document.querySelector("#navegacion");
+const movil = window.matchMedia("(max-width: 600px)");
+function cambiarMenu(abierto) {
+  botonMenu.setAttribute("aria-expanded", String(abierto));
+  botonMenu.textContent = abierto ? "Cerrar menú" : "Menú";
+  navegacion.hidden = movil.matches && !abierto;
 }
-
-function cerrarMenu() {
-  body.style.overflow = "auto";
-  iconoAbrir.style.display = "block";
-  iconoCerrar.style.display = "none";
-  menuOpciones.classList.remove("menu-abierto");
-
-  opciones.forEach((o) => {
-    o.removeEventListener("click", () => cerrarMenu());
-  });
+function adaptarMenu() {
+  botonMenu.hidden = !movil.matches;
+  cambiarMenu(false);
 }
+botonMenu.addEventListener("click", () => cambiarMenu(botonMenu.getAttribute("aria-expanded") !== "true"));
+navegacion.addEventListener("click", (event) => {
+  if (event.target.closest("a")) cambiarMenu(false);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && movil.matches && botonMenu.getAttribute("aria-expanded") === "true") {
+    cambiarMenu(false);
+    botonMenu.focus();
+  }
+});
+movil.addEventListener("change", adaptarMenu);
+adaptarMenu();
+document.querySelector("#anio").textContent = new Date().getFullYear();
 
-function manejadorEnvio(event) {
+const formulario = document.querySelector('form[name="contact"]');
+const estado = document.querySelector("#estado-envio");
+formulario.addEventListener("submit", async (event) => {
   event.preventDefault();
-
-  const form = event.target;
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(new FormData(form)).toString(),
-  })
-    .then(() => {
-      document.querySelector(".mensaje-exitoso").style.display = "block";
-      form.reset();
-    })
-    .catch(() => {
-      document.querySelector(".mensaje-error").style.display = "block";
+  if (formulario.getAttribute("aria-busy") === "true") return;
+  const boton = formulario.querySelector('[type="submit"]');
+  boton.disabled = true;
+  formulario.setAttribute("aria-busy", "true");
+  estado.dataset.estado = "enviando";
+  estado.textContent = "Enviando tu mensaje…";
+  try {
+    const respuesta = await fetch(formulario.action, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(formulario)).toString(),
     });
-
-  gtag("event", "click", {
-    event_category: "Form",
-    event_label: "Enviar",
-  });
-}
-
-document.addEventListener("scroll", function () {
-  const experiencia = document.querySelector("#experiencia");
-  const educacion = document.querySelector("#educacion");
-  const habilidades = document.querySelector("#habilidades");
-  const sobreMi = document.querySelector("#sobre-mi");
-
-  if (experiencia && window.scrollY >= experiencia.offsetTop) {
-    gtag("event", "view", {
-      event_category: "Section",
-      event_label: "Experiencia",
-    });
-  }
-  if (educacion && window.scrollY >= educacion.offsetTop) {
-    gtag("event", "view", {
-      event_category: "Section",
-      event_label: "Educación",
-    });
-  }
-  if (habilidades && window.scrollY >= habilidades.offsetTop) {
-    gtag("event", "view", {
-      event_category: "Section",
-      event_label: "Habilidades",
-    });
-  }
-  if (sobreMi && window.scrollY >= sobreMi.offsetTop) {
-    gtag("event", "view", {
-      event_category: "Section",
-      event_label: "Sobre mí",
-    });
+    if (!respuesta.ok) throw new Error("El servidor no confirmó el envío");
+    estado.dataset.estado = "exito";
+    estado.textContent = "¡Gracias! Tu mensaje se ha enviado correctamente.";
+    formulario.reset();
+  } catch {
+    estado.dataset.estado = "error";
+    estado.textContent = "No se pudo confirmar el envío. Tus datos se conservan para que puedas intentarlo de nuevo.";
+  } finally {
+    boton.disabled = false;
+    formulario.removeAttribute("aria-busy");
   }
 });

@@ -1,6 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'nonce-ZP4ABA8p2M' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+    />
     <script
       nonce="ZP4ABA8p2M"
       async
@@ -14,795 +19,370 @@
       gtag("js", new Date());
       gtag("config", "G-JWWW8SG0FM");
     </script>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-  default-src 'self';
-  script-src 'self' 'nonce-ZP4ABA8p2M' https://www.googletagmanager.com https://www.google-analytics.com;
-  style-src 'self';
-  img-src 'self' data:;
-  connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
-  frame-src 'self';
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-"
-    />
-
-    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ingeniero de Sistemas con más de cinco años de experiencia en desarrollo frontend. Especializado en HTML, CSS, JavaScript y Vue.js. Colaborador de diversos proyectos bajo metodologías ágiles. Apasionado por crear interfaces eficientes y accesibles, comprometido con la excelencia técnica y soluciones de alta calidad."
-    />
-    <meta
-      name="keywords"
-      content="Ingeniero de Sistemas, Desarrollo Frontend, Desarrollo Web, Diseño Responsivo, Diseño Mobile-first, HTML semántico, Accesibilidad web, SEO, Estándares Web, Compatibilidad entre Navegadores, HTML, CSS, JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, Integración de API's"
+      content="Desarrollo y mejora de sitios web para pequeñas empresas: diseño adaptable, rendimiento, accesibilidad y soluciones para simplificar procesos."
     />
     <meta name="author" content="Esdras Malavé" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <title>
-      Esdras Malavé | Ingeniero de Sistemas | Desarrollador Frontend
-    </title>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta
+      property="og:title"
+      content="Desarrollo y mejora de sitios web | Esdras Malavé"
+    />
+    <meta
+      property="og:description"
+      content="Ayudo a pequeñas empresas a crear y mejorar sus sitios web y a simplificar procesos mediante soluciones web."
+    />
+    <meta property="og:url" content="https://www.esdrasmalave.com/" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <title>Desarrollo web para pequeñas empresas | Esdras Malavé</title>
+    <link rel="canonical" href="https://www.esdrasmalave.com/" />
     <link
       rel="sitemap"
       type="application/xml"
       href="https://www.esdrasmalave.com/sitemap.xml"
     />
     <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
   </head>
-
-  <body>
+  <body class="portafolio-desarrollador">
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
     <header>
+      <a class="identidad" href="#inicio">Esdras Malavé</a>
       <button
+        class="boton-menu"
         type="button"
-        onclick="abrirMenu();   gtag('event', 'click', {
-        event_category: 'Button',
-        event_label: 'Abrir Menu',
-      });"
+        aria-expanded="false"
+        aria-controls="navegacion"
+        hidden
       >
-        <img
-          class="icono-menu-abrir"
-          src="icons/menu.svg"
-          alt="Abrir menu de opciones de navegación"
-          width="28px"
-          height="28px"
-          title="Abrir menu de opciones de navegación"
-        />
-        <img
-          class="icono-menu-cerrar"
-          src="icons/cerrar.svg"
-          alt="Cerrar menu de opciones de navegación"
-          width="28px"
-          height="28px"
-          title="Cerrar menu de opciones de navegación"
-        />
+        Menú
       </button>
-      <nav>
+      <nav id="navegacion" aria-label="Navegación principal">
         <ul>
-          <li>
-            <a
-              href="#sobre-mi"
-              title="Ir a la sección sobre mí"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Sobre mí'})"
-              >Sobre mí</a
-            >
-          </li>
-          <li>
-            <a
-              href="#servicios"
-              title="Ir a la sección servicios"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Servicios'})"
-              >Servicios</a
-            >
-          </li>
-          <li>
-            <a
-              href="#experiencia"
-              title="Ir a la sección de experiencia"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Experiencia'})"
-              >Experiencia</a
-            >
-          </li>
-          <li>
-            <a
-              href="#proyectos"
-              title="Ir a la sección de proyectos"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Proyectos'})"
-              >Proyectos</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contacto"
-              title="Ir a la sección de contacto"
-              onclick="gtag('event', 'click', {'event_category': 'Navigation', 'event_label': 'Contacto'})"
-              >Contacto</a
-            >
-          </li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
-
-    <main>
-      <section class="seccion-principal-movil">
-        <h1>
-          Hello World! <br />
-          <span class="nombre">soy Esdras Malavé</span>
-          <span class="subtitulo">
-            Desarrollador Frontend con <br />
-            +6 años de experiencia
-          </span>
+    <main id="contenido" tabindex="-1">
+      <section
+        class="seccion-principal"
+        id="inicio"
+        aria-labelledby="titulo-inicio"
+      >
+        <p class="hero-etiqueta">Desarrollo web para pequeñas empresas</p>
+        <h1 id="titulo-inicio">
+          Desarrollo y mejora de sitios web para tu negocio.
         </h1>
+        <p class="introduccion">
+          Ayudo a pequeñas empresas a crear y mejorar sus sitios web, con
+          especial atención al rendimiento, la accesibilidad y la facilidad de
+          uso. También desarrollo soluciones web para simplificar tareas y
+          procesos.
+        </p>
+        <a class="boton" href="#contacto">Cuéntame tu proyecto</a>
       </section>
-
-      <section class="seccion-principal">
-        <h1>
-          Hello World! <span class="nombre">soy Esdras Malavé</span>
-          <span class="subtitulo"
-            >Desarrollador Frontend con +6 años de experiencia</span
-          >
-        </h1>
+      <section aria-labelledby="titulo-problemas">
+        <div class="encabezado-seccion">
+          <h2 id="titulo-problemas">Problemas en los que puedo ayudarte</h2>
+          <p>
+            No todas las empresas necesitan empezar de cero. A veces basta con
+            mejorar lo que ya existe.
+          </p>
+        </div>
+        <ul class="problemas" role="list">
+          <li>Tu negocio necesita una página web clara y fácil de utilizar.</li>
+          <li>
+            Tu sitio tarda en cargar o presenta problemas en dispositivos
+            móviles.
+          </li>
+          <li>
+            Tus clientes realizan solicitudes o pedidos mediante procesos
+            manuales.
+          </li>
+          <li>
+            Tu web necesita mejoras de accesibilidad, estructura o
+            mantenimiento.
+          </li>
+        </ul>
       </section>
-
-      <section class="seccion-sobre-mi">
-        <h2 id="sobre-mi">Sobre mí</h2>
-
+      <section
+        class="servicios"
+        id="servicios"
+        aria-labelledby="titulo-servicios"
+      >
+        <div class="encabezado-seccion">
+          <h2 id="titulo-servicios">Servicios</h2>
+          <p>
+            Soluciones adaptadas a la necesidad de cada negocio, con un alcance
+            y entregables acordados.
+          </p>
+        </div>
+        <div class="lista-servicios">
+          <article>
+            <p class="numero-servicio">01</p>
+            <h3>Desarrollo de sitios web</h3>
+            <p>
+              Creación de sitios web para presentar tu negocio, explicar tus
+              servicios y facilitar el contacto con tus clientes. Diseño
+              adaptable a móviles y buenas prácticas técnicas desde el inicio.
+            </p>
+          </article>
+          <article>
+            <p class="numero-servicio">02</p>
+            <h3>Mejora y optimización web</h3>
+            <p>
+              Revisión y mejora de sitios existentes con problemas de velocidad,
+              visualización, accesibilidad o estructura técnica que afecta al
+              SEO.
+            </p>
+          </article>
+          <article>
+            <p class="numero-servicio">03</p>
+            <h3>Soluciones web a medida</h3>
+            <p>
+              Desarrollo de formularios, herramientas e integraciones para
+              simplificar tareas como recibir pedidos, gestionar solicitudes o
+              intercambiar información.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section
+        class="seccion-proyectos"
+        id="proyectos"
+        aria-labelledby="titulo-proyectos"
+      >
+        <div class="encabezado-seccion">
+          <h2 id="titulo-proyectos">Un proyecto real</h2>
+          <p>
+            Un ejemplo de cómo una solución web puede facilitar un proceso del
+            negocio.
+          </p>
+        </div>
+        <article class="caso">
+          <a
+            href="https://cordonerialama.cl"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="./img/cordoneria-lama.png"
+              alt="Visitar el sitio web de Cordonería Lama (abre en otra pestaña)"
+              loading="lazy"
+              decoding="async"
+              width="1574"
+              height="1295"
+          /></a>
+          <div>
+            <p class="etiqueta">Cordonería Lama</p>
+            <h3>Solicitudes de pedidos mayoristas desde una web</h3>
+            <dl>
+              <dt>Necesidad</dt>
+              <dd>
+                Facilitar a los clientes mayoristas la selección de productos y
+                el envío de solicitudes de pedido.
+              </dd>
+              <dt>Solución</dt>
+              <dd>
+                Una plataforma web con formulario de pedidos que genera un
+                resumen y un PDF, y envía la información al cliente y al
+                negocio.
+              </dd>
+              <dt>Resultado</dt>
+              <dd>
+                Un canal digital para recibir solicitudes y consultar su detalle
+                por correo electrónico.
+              </dd>
+            </dl>
+            <a
+              href="https://cordonerialama.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visitar Cordonería Lama
+              <span class="solo-lectores">(abre en otra pestaña)</span></a
+            >
+          </div>
+        </article>
+      </section>
+      <section
+        class="seccion-sobre-mi"
+        id="sobre-mi"
+        aria-labelledby="titulo-sobre-mi"
+      >
+        <h2 id="titulo-sobre-mi">Sobre mí</h2>
         <div class="contenedor-descripcion">
-          <p class="descripcion">
-            Me especialice como <em>Desarrollador Frontend</em>. He colaborado
-            en más de 15 proyectos con equipos pequeños, medianos y grandes bajo
-            metodologías agiles y tradicionales. Me enfoco principalmente en
-            garantizar buen
-            <em
-              >diseño adaptativo, semántica, accesibilidad, rendimiento y
-              SEO</em
-            >; con la finalidad de ofrecer la mejor experiencia a los usuarios.
-          </p>
-
-          <img
-            src="./img/foto.png"
-            alt="Foto en el Cerro Manquegue"
-            class="mi-foto"
-          />
-        </div>
-
-        <div class="enlaces-contacto">
-          <a
-            href="files/cv.pdf"
-            download="EsdrasMalave_CV.pdf"
-            title="Descargar archivo EsdrasMalave_CV.pdf"
-            onclick="gtag('event', 'click', {'event_category': 'Download', 'event_label': 'DescargarCV'})"
-          >
+          <div>
+            <p>
+              Soy Esdras Malavé, ingeniero de sistemas y desarrollador frontend
+              con más de ocho años de experiencia en el desarrollo y mejora de
+              aplicaciones web.
+            </p>
+            <p>
+              Me especializo en crear interfaces adaptables a distintos
+              dispositivos, mejorar el rendimiento y aplicar buenas prácticas de
+              accesibilidad, semántica y SEO técnico. He trabajado en proyectos
+              de distintas dimensiones y enfoco mis servicios en ayudar a
+              pequeñas y medianas empresas a resolver necesidades concretas
+              mediante soluciones web.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Conoce mi trayectoria en LinkedIn
+              <span class="solo-lectores">(abre en otra pestaña)</span></a
+            >
+          </div>
+          <div class="perfil-visual">
             <img
-              src="icons/descargar.svg"
-              alt="Descargar archivo EsdrasMalave_CV.pdf"
-              title="Descargar archivo EsdrasMalave_CV.pdf"
+              class="foto-perfil"
+              src="./img/foto-de-perfil.png"
+              alt="Retrato de Esdras Malavé"
+              loading="lazy"
+              decoding="async"
+              width="500"
+              height="500"
             />
-            <span>Descargar CV</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ir al sitio web de Linkedin"
-            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'LinkedIn'})"
-          >
-            <img
-              src="icons/linkedin.svg"
-              alt="Ir al sitio web de Linkedin"
-              title="Ir al sitio web de Linkedin"
-            />
-            <span>LinkedIn</span>
-          </a>
-          <a
-            href="https://github.com/esdrasmh"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ir al sitio web de GitHub"
-            onclick="gtag('event', 'click', {'event_category': 'Social', 'event_label': 'GitHub'})"
-          >
-            <img
-              src="icons/github.svg"
-              alt="Ir al sitio web de GitHub"
-              title="Ir al sitio web de GitHub"
-            />
-            <span>GitHub</span>
-          </a>
+          </div>
         </div>
       </section>
-
-      <section class="servicios">
-        <h2 id="servicios">Servicios</h2>
-
-        <details name="servicio">
-          <summary>Diseño y desarrollo de páginas web</summary>
+      <section
+        class="seccion-contacto"
+        id="contacto"
+        aria-labelledby="titulo-contacto"
+      >
+        <div class="encabezado-seccion">
+          <h2 id="titulo-contacto">Hablemos de tu proyecto</h2>
           <p>
-            Ofrezco la creación de sitios web modernos y adaptativos utilizando
-            tecnologías como HTML5, CSS3 y JavaScript, así como frameworks
-            avanzados como Vue.js, React y Angular. Mi enfoque garantiza que tu
-            página sea visualmente atractiva y funcional en cualquier
-            dispositivo.
+            Describe qué necesitas crear o mejorar. Revisaré tu mensaje para
+            entender el alcance de la necesidad.
           </p>
-        </details>
-
-        <details name="servicio">
-          <summary>Migración y mantenimiento de sitios web</summary>
-          <p>
-            Facilito la migración de sitios web y aplicaciones a tecnologías
-            modernas, como pasar de jQuery a Vue.js, React o Angular. También me
-            encargo de corregir errores, mantener y actualizar sitios web
-            existentes para garantizar su funcionamiento óptimo.
-          </p>
-        </details>
-
-        <details name="servicio">
-          <summary>Optimización de rendimiento web</summary>
-          <p>
-            Me dedico a reducir el tiempo de carga de tu sitio web, mejorando
-            así la experiencia del usuario. Implemento técnicas para que tu
-            página funcione de manera más rápida y eficiente.
-          </p>
-        </details>
-
-        <details name="servicio">
-          <summary>Optimización de SEO</summary>
-          <p>
-            Implemento estrategias para mejorar el posicionamiento de tu sitio
-            web en los motores de búsqueda. Esto incluye diversas técnicas para
-            aumentar la visibilidad y atraer más visitantes.
-          </p>
-        </details>
-
-        <details name="servicio">
-          <summary>Accesibilidad web</summary>
-          <p>
-            Aseguro que tu sitio web sea accesible para todos los usuarios,
-            siguiendo los estándares de accesibilidad WCAG. Implemento buenas
-            prácticas para que tu contenido sea usable por personas con
-            discapacidades.
-          </p>
-        </details>
-
-        <details name="servicio">
-          <summary>Consultoría y asesoramiento técnico</summary>
-          <p>
-            Ofrezco consultoría para mejorar el diseño adaptativo, la semántica,
-            la accesibilidad, el rendimiento y el SEO de tu sitio web.
-            Proporciono recomendaciones prácticas para optimizar todos estos
-            aspectos.
-          </p>
-        </details>
-
-        <details name="servicio">
-          <summary>Mentoría y capacitación</summary>
-          <p>
-            Brindo mentoría a desarrolladores novatos y capacitación en las
-            mejores prácticas del desarrollo frontend y herramientas modernas.
-            Mi objetivo es ayudar a los desarrolladores a mejorar sus
-            habilidades y conocimientos.
-          </p>
-        </details>
-      </section>
-
-      <section class="seccion-experiencia">
-        <h2 id="experiencia">Experiencia</h2>
-        <ul>
-          <li>
-            <h3 class="empresa-cliente">Independiente</h3>
-            <p>Periodo: <time datetime="2018-08">05/2024</time> - actualidad</p>
-            <p>Cargo: Desarrollador Web</p>
-            <p>Responsabilidades:</p>
-            <ul class="responsabilidades">
-              <li>Recopilar y definir requerimientos de clientes.</li>
-              <li>Reportar y exponer avances de tareas.</li>
-              <li>
-                Diseñar y desarrollar UI considerando principalmente los
-                dispositivos móviles.
-              </li>
-              <li>Implementar servicio para la obtención de datos.</li>
-              <li>
-                Configurar mecanismos de SEO para mayor visibilidad de los
-                sitios.
-              </li>
-              <li>
-                Configurar mecanismos de accesibilidad y rendimiento de los
-                sitios.
-              </li>
-              <li>Crear y configurar BD en la nube.</li>
-              <li>
-                Crear microservicio para hidratar BD y posteriormente consumir
-                los datos.
-              </li>
-              <li>
-                Configurar servicio para el envío y recepción de correos
-                corporativos.
-              </li>
-              <li>Crear microservicio para enviar correos electrónicos.</li>
-              <li>Diseñar y desarrollar plantillas de correos electrónicos.</li>
-              <li>
-                Configurar dominios y hostings para el despliegue de sitios.
-              </li>
-            </ul>
-            <p>Tecnologías:</p>
-            <ul class="tecnologias">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Vuetify</li>
-              <li>JavaScript</li>
-              <li>Vue.js</li>
-              <li>Pinea</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-              <li>Mongoose</li>
-              <li>SendGrid</li>
-              <li>Netlify</li>
-              <li>Render</li>
-              <li>GitHub</li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="empresa-cliente">
-              Empresa:
-              <a
-                href="https://www.api-ux.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ir al sitio web de Apiux"
-                >Apiux Tecnología</a
-              >
-              <span
-                >Cliente:
-                <a
-                  href="http://www.sii.cl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Ir al sitio web de Servicio de
-                            Impuestos Internos"
-                  >Servicio de Impuestos Internos</a
-                ></span
-              >
-            </h3>
+        </div>
+        <div class="contenido-contacto">
+          <div>
+            <h3>Cuéntame qué quieres resolver</h3>
             <p>
-              Periodo: <time datetime="2023-03">03/2023</time> a
-              <time datetime="2024-01">01/2024</time>
+              Cuéntame qué problema quieres resolver y qué resultado esperas. Si
+              ya tienes un sitio web, incluye su dirección.
             </p>
-            <p>Cargo: Desarrollador Frontend</p>
-            <p>Responsabilidades:</p>
-            <ul class="responsabilidades">
-              <li>Mantuve y desarrollé funcionalidades.</li>
-              <li>Detecté y corregí bugs en proyectos de producción.</li>
-              <li>Optimice componentes UI.</li>
-              <li>Optimice estilos CSS.</li>
-              <li>Optimice imágenes e iconos para un mejor rendimiento.</li>
-              <li>Cree y mejore vistas responsivas.</li>
-              <li>Mejore semántica y accesibilidad.</li>
-              <li>Depure archivos HTML con código en desuso.</li>
-              <li>Corregí advertencias de la consola del navegador.</li>
-            </ul>
-            <p>Tecnologías:</p>
-            <ul class="tecnologias">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-              <li>jQuery</li>
-              <li>AJAX</li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="empresa-cliente">
-              Empresa:
-              <a
-                href="http://www.sii-group.cl"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ir al sitio web de SII Group"
-                >SII Group</a
-              >
-              <span
-                >Cliente:
-                <a
-                  href="https://www.derco.cl/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Ir al sitio web de Derco"
-                  >Derco</a
-                ></span
-              >
-            </h3>
-            <p>
-              Periodo: <time datetime="2021-11">11/2021</time> a
-              <time datetime="2023-01">01/2023</time>
+          </div>
+          <form
+            name="contact"
+            method="POST"
+            action="/"
+            data-netlify="true"
+            aria-label="Formulario de contacto"
+            aria-describedby="ayuda-formulario"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p id="ayuda-formulario">
+              Los campos marcados con * son obligatorios.
             </p>
-            <p>Cargo: Desarrollador Frontend</p>
-            <p>Responsabilidades:</p>
-            <ul class="responsabilidades">
-              <li>Detecté y corregí bugs en proyectos de producción.</li>
-              <li>Mantuve y desarrollé funcionalidades.</li>
-              <li>Optimice componentes UI.</li>
-              <li>Optimice imágenes e iconos para un mejor rendimiento.</li>
-              <li>Migre templetes Pug a HTML.</li>
-              <li>Corregí advertencias de Sonar Cloud.</li>
-              <li>
-                Participe en reuniones para refinar, estimar y asignar tareas.
-              </li>
-              <li>
-                Apoye a otros desarrolladores con menos experiencia en frontend
-                para la realización de tareas.
-              </li>
-            </ul>
-            <p>Tecnologías:</p>
-            <ul class="tecnologias">
-              <li>HTML</li>
-              <li>Pug</li>
-              <li>Stylus</li>
-              <li>Sass</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>Vue.js</li>
-              <li>Vuex</li>
-              <li>VueRouter</li>
-              <li>VueMeta</li>
-              <li>React</li>
-              <li>MongoDB</li>
-              <li>Axios</li>
-              <li>Docker</li>
-              <li>SonarCloud</li>
-              <li>AWS S3</li>
-              <li>Gitflow</li>
-              <li>GitHub</li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="empresa-cliente">
-              Empresa:
-              <a
-                href="http://www.hermesccs.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ir al sitio web de Hermes
-                        Comunicaciones"
-                >Hermes Comunicaciones</a
-              >
-            </h3>
-            <p>
-              Periodo: <time datetime="2020-10">10/2020</time> a
-              <time datetime="2021-11">11/2021</time>
-            </p>
-            <p>Cargo: Desarrollador Frontend</p>
-            <p>Responsabilidades:</p>
-            <ul class="responsabilidades">
-              <li>Detecté y corregí bugs en proyectos de producción.</li>
-              <li>
-                Desarrolle API proxy para verificar las peticiones al servidor
-                que provenían de la web.
-              </li>
-              <li>Desarrolle versión web de la app hibrida existente.</li>
-              <li>Migre App hibrida para Android e IOS.</li>
-              <li>Integre API's.</li>
-              <li>
-                Participe en reuniones con el cliente para definir
-                requerimientos.
-              </li>
-              <li>
-                Apoye a otros desarrolladores con menos experiencia en frontend
-                para la realización de tareas.
-              </li>
-              <li>
-                Revise y probe tareas de otros desarrolladores para integrarlas
-                a producción.
-              </li>
-              <li>
-                Compilé y desplegué versiones de prueba para Android e IOS con
-                Firesabe.
-              </li>
-            </ul>
-            <p>Tecnologías:</p>
-            <ul class="tecnologias">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Bootstrap</li>
-              <li>Vuetify</li>
-              <li>JavaScript</li>
-              <li>Vue.js</li>
-              <li>Vuex</li>
-              <li>VueRouter</li>
-              <li>React</li>
-              <li>Redux</li>
-              <li>Cordova</li>
-              <li>Ionic</li>
-              <li>Capacitor</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Axios</li>
-              <li>Fetch API</li>
-              <li>Google Maps</li>
-              <li>AWS Cognito</li>
-              <li>Firebase</li>
-              <li>GitHub</li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="empresa-cliente">
-              Empresa:
-              <a
-                href="https://uxready.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ir al sitio web de UX Ready"
-                >UX Ready</a
-              >
-            </h3>
-            <p>
-              Periodo: <time datetime="2020-02">02/2020</time> a
-              <time datetime="2020-06">06/2020</time>
-            </p>
-            <p>Cargo: Desarrollador Frontend</p>
-            <p>Responsabilidades:</p>
-            <ul class="responsabilidades">
-              <li>Desarrolle sitio web.</li>
-              <li>Integre componentes de otros proyectos.</li>
-              <li>Integre API's.</li>
-              <li>
-                Participe en reuniones con el cliente para definir
-                requerimientos.
-              </li>
-            </ul>
-            <p>Tecnologías:</p>
-            <ul class="tecnologias">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Vuetify</li>
-              <li>JavaScript</li>
-              <li>Vue.js</li>
-              <li>Vuex</li>
-              <li>VueRouter</li>
-              <li>Vis.js</li>
-              <li>Google Maps</li>
-              <li>Axios</li>
-              <li>GitHub</li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="empresa-cliente">
-              Empresa:
-              <a
-                href="http://www.pacific-logging.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ir al sitio web de Pacific Logging"
-                >Pacific Logging</a
-              >
-            </h3>
-            <p>
-              Periodo: <time datetime="2018-08">08/2018</time> a
-              <time datetime="2020-01">01/2020</time>
-            </p>
-            <p>Cargo: Desarrollador Frontend</p>
-            <p>Responsabilidades:</p>
-            <ul class="responsabilidades">
-              <li>Participe en el desarrollo de sitio web.</li>
-              <li>Integre API's.</li>
-              <li>Realice QA de las nuevas integraciones.</li>
-              <li>
-                Participe en reuniones con el cliente para definir
-                requerimientos.
-              </li>
-            </ul>
-            <p>Tecnologías:</p>
-            <ul class="tecnologias">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Vuetify</li>
-              <li>JavaScript</li>
-              <li>Vue.js</li>
-              <li>Vuex</li>
-              <li>VueRouter</li>
-              <li>VueBus</li>
-              <li>Chart.js</li>
-              <li>Socket.io</li>
-              <li>Google Maps</li>
-              <li>Firebase</li>
-              <li>SweetAlert2</li>
-              <li>Axios</li>
-              <li>GitLab</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-
-      <section class="seccion-proyectos">
-        <h2 id="proyectos">Proyectos</h2>
-        <ul>
-          <li>
-            <div class="contenedor-imagen">
-              <a
-                href="https://cordonerialama.cl"
-                target="_blank"
-                title="Ir al sitio web de Cordonería Lama"
-              >
-                <img
-                  loading="lazy"
-                  src="./img/cordoneria-lama.png"
-                  alt="Ir al sitio web de Cordonería Lama"
+            <div class="campos-contacto">
+              <div>
+                <label for="nombre">Nombre *</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  autocomplete="name"
+                  minlength="2"
+                  required
                 />
-              </a>
-            </div>
-
-            <div class="contenedor-descripcion">
-              <h3>CordoneriaLama</h3>
-              <p>
-                Este proyecto permitió automatizar las solicitudes de pedidos
-                realizados por clientes mayoristas en la empresa Albornoz y Lama
-                SPA.
-              </p>
-              <p>Tecnologías:</p>
-              <ul class="tecnologias">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Vuetify</li>
-                <li>JavaScript</li>
-                <li>Vue.js</li>
-                <li>Pinia</li>
-                <li>VueRouter</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>MongoDB</li>
-                <li>Mongoose</li>
-                <li>SendGrid</li>
-                <li>Zoho</li>
-                <li>Netlify</li>
-                <li>Render</li>
-                <li>GitHub</li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <div class="contenedor-imagen">
-              <a
-                href="https://simpli-post.netlify.app"
-                target="_blank"
-                title="Ir al sitio web de SimpliPost"
-              >
-                <img
-                  loading="lazy"
-                  src="./img/simpli-post-white.png"
-                  alt="Ir al sitio web de SimpliPost"
+              </div>
+              <div>
+                <label for="correo">Correo electrónico *</label>
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  autocomplete="email"
+                  required
                 />
-              </a>
+              </div>
             </div>
-
-            <div class="contenedor-descripcion">
-              <h3>SimpliPost</h3>
-              <p>
-                Proyecto de código abierto que integra IA generativa de Google
-                Cloud para ayudar a estructurar de forma rápida vacantes de
-                empleo.
-              </p>
-              <p>Tecnologías:</p>
-              <ul class="tecnologias">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Vue.js</li>
-                <li>Vuetify</li>
-                <li>Google Generative AI</li>
-                <li>Google Analytics</li>
-                <li>Netlify</li>
-                <li>GitHub</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="seccion-contacto">
-        <h2 id="contacto">Contacto</h2>
-
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          onsubmit="manejadorEnvio(event)"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-
-          <label for="nombre">Nombre *</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            minlength="3"
-            placeholder="José García"
-            required
-          />
-
-          <label for="correo">Correo *</label>
-          <input
-            type="email"
-            id="correo"
-            name="correo"
-            placeholder="jgarcia@gmail.com"
-            required
-          />
-
-          <label for="mensaje">Mensaje *</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="5"
-            minlength="10"
-            required
-          ></textarea>
-
-          <small>* Campos obligatorios</small>
-
-          <button type="submit">Enviar</button>
-        </form>
-
-        <div class="mensaje-exitoso">
-          <p>¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.</p>
+            <label for="necesidad">Tipo de necesidad (opcional)</label>
+            <select id="necesidad" name="necesidad">
+              <option value="">Selecciona una opción</option>
+              <option value="nueva-web">Crear una web</option>
+              <option value="mejora-web">Mejorar una web existente</option>
+              <option value="solucion-medida">Una solución web a medida</option>
+              <option value="otro">Otro / No lo tengo claro</option>
+            </select>
+            <label for="mensaje">Cuéntame tu necesidad *</label>
+            <p id="ayuda-mensaje">
+              Indica qué problema quieres resolver y qué necesitas conseguir
+              (mínimo 10 caracteres).
+            </p>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="6"
+              minlength="10"
+              aria-describedby="ayuda-mensaje"
+              required
+            ></textarea>
+            <button class="boton" type="submit">Enviar mensaje</button>
+          </form>
         </div>
-
-        <div class="mensaje-error">
-          <p>Ocurrió un error. Por favor, inténtalo de nuevo.</p>
-        </div>
+        <p
+          id="estado-envio"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
       </section>
     </main>
-
     <footer>
-      <p>2024 - Esdras Malavé</p>
+      <p>© <span id="anio">2026</span> Esdras Malavé</p>
+      <a
+        href="https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >LinkedIn <span class="solo-lectores">(abre en otra pestaña)</span></a
+      >
     </footer>
-
-    <script nonce="ZP4ABA8p2M" src="./index.js"></script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" nonce="ZP4ABA8p2M">
       {
-        "@context": "https://schema.org/",
-        "@type": "Service",
-        "serviceType": "Desarrollo Web",
-        "provider": {
-          "@type": "Organization",
-          "name": "Esdras Malavé",
-          "url": "https://esdrasmalave.com"
-        },
-        "offers": [
+        "@context": "https://schema.org",
+        "@graph": [
           {
-            "@type": "Offer",
-            "name": "Diseño y desarrollo de páginas web",
-            "description": "Creación de sitios web modernos y adaptativos utilizando tecnologías como HTML5, CSS3 y JavaScript, así como frameworks avanzados como Vue.js, React y Angular."
+            "@type": "Person",
+            "@id": "https://www.esdrasmalave.com/#persona",
+            "name": "Esdras Malavé",
+            "url": "https://www.esdrasmalave.com/",
+            "jobTitle": "Desarrollador frontend",
+            "sameAs": [
+              "https://www.linkedin.com/in/esdras-malav%C3%A9-b1678815b/",
+              "https://github.com/esdrasmh"
+            ]
           },
           {
-            "@type": "Offer",
-            "name": "Migración y mantenimiento de sitios web",
-            "description": "Migración de sitios web y aplicaciones a tecnologías modernas, corrección de errores, mantenimiento y actualización de sitios web existentes."
+            "@type": "Service",
+            "name": "Desarrollo de sitios web",
+            "provider": {
+              "@id": "https://www.esdrasmalave.com/#persona"
+            }
           },
           {
-            "@type": "Offer",
-            "name": "Optimización de rendimiento web",
-            "description": "Reducción del tiempo de carga de sitios web para mejorar la experiencia del usuario."
+            "@type": "Service",
+            "name": "Mejora y optimización web",
+            "provider": {
+              "@id": "https://www.esdrasmalave.com/#persona"
+            }
           },
           {
-            "@type": "Offer",
-            "name": "Optimización de SEO",
-            "description": "Implementación de estrategias para mejorar el posicionamiento de sitios web en los motores de búsqueda."
-          },
-          {
-            "@type": "Offer",
-            "name": "Accesibilidad web",
-            "description": "Implementación de buenas prácticas para que el sitio sea accesible para todas las personas, cumpliendo con los estándares WCAG."
-          },
-          {
-            "@type": "Offer",
-            "name": "Consultoría y asesoramiento técnico",
-            "description": "Consultoría para mejorar el diseño adaptativo, semántica, accesibilidad, rendimiento y SEO de sitios web."
-          },
-          {
-            "@type": "Offer",
-            "name": "Mentoría y capacitación",
-            "description": "Mentoría a desarrolladores novatos y capacitación en mejores prácticas en desarrollo frontend y herramientas modernas."
+            "@type": "Service",
+            "name": "Soluciones web a medida",
+            "provider": {
+              "@id": "https://www.esdrasmalave.com/#persona"
+            }
           }
         ]
       }
